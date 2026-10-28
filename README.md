@@ -1,8 +1,11 @@
-<p align="center"><img src="assets/cover.png" alt="NamiGPT · 零基础入门大模型 · LLM 基础教程" width="100%"></p>
+<div align="center">
+
+<img src="assets/logo.png" alt="NamiGPT logo" width="120">
 
 # NamiGPT
 
-**零基础入门大模型（LLM）的基础教程：从零手写 GPT-2，一行行看懂大模型是怎么工作的。**
+**零基础入门大模型（LLM）的基础教程**<br>
+从零手写 GPT-2，一行行看懂大模型是怎么工作的
 
 [![test](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml/badge.svg)](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml)
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
@@ -12,6 +15,12 @@
 [![教程](https://img.shields.io/badge/%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B-namiai.tech-FFD84D)](https://namiai.tech/articles/)
 [![GitHub stars](https://img.shields.io/github/stars/aa1143/NamiGPT?style=social)](https://github.com/aa1143/NamiGPT/stargazers)
 [![X](https://img.shields.io/badge/@antiAIvo-000000?logo=x&logoColor=white)](https://x.com/antiAIvo)
+
+[图文教程](https://namiai.tech/articles/) · [快速开始](#快速开始) · [在线可视化](https://namiai.tech/matrix/) · [作者 𝕏](https://x.com/antiAIvo)
+
+<img src="assets/matrix-attention.gif" alt="用「猫吃鱼」一格一格算注意力分数" width="100%">
+
+</div>
 
 不需要大模型基础，会一点 Python、懂矩阵乘法这样的线性代数基础就够了。我们用 PyTorch 从零手写一个 GPT-2，加载 OpenAI 官方权重，跑通推理和文本生成。
 
@@ -31,9 +40,7 @@ GPT-2 的骨架来自 2017 年的论文 *Attention Is All You Need*（GPT-2 只�
 
 **2. 代码看不懂？看矩阵是怎么一格一格算出来的**
 
-同样用「猫吃鱼」3 个词，把一次完整的推理拆成 11 步，每个矩阵都能点「播放」，看每一格是怎么算出来的。读代码卡住的时候，对照着看会容易很多。
-
-<p align="center"><img src="assets/matrix-attention.gif" alt="注意力分数逐格计算" width="100%"></p>
+页首那张动图就是其中一步。同样用「猫吃鱼」3 个词，把一次完整的推理拆成 11 步，每个矩阵都能点「播放」，看每一格是怎么算出来的。读代码卡住的时候，对照着看会容易很多。
 
 👉 [大模型是怎么推理的](https://namiai.tech/matrix/)
 
