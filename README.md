@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/cover.png" alt="NamiGPT：零基础入门大模型 · LLM 基础教程" width="100%"></p>
+<p align="center"><img src="assets/cover.png" alt="NamiGPT · 零基础入门大模型 · LLM 基础教程" width="100%"></p>
 
 # NamiGPT
 
