@@ -12,6 +12,24 @@
 - 用一个 3 个词的例子「猫吃鱼」，从分词一路推到文本生成，每篇都配可运行脚本
 - 和 HuggingFace 官方实现逐项对齐，[测试](tests/test_vs_huggingface.py)保证结果一致
 
+## 学之前，先看这两份可视化
+
+**1. 先看懂 Transformer 原论文的架构图**
+
+GPT-2 的骨架来自 2017 年的论文 *Attention Is All You Need*（GPT-2 只用了图中右半边的解码器部分）。我把论文里最有名的这张架构图做成了动态版：按数据流动的顺序一步步高亮，每一步都配有原文和白话解释。
+
+<p align="center"><img src="assets/transformer-architecture.gif" alt="Transformer 架构图动态版" width="100%"></p>
+
+👉 [一张图看懂 Transformer](https://namiai.tech/papers/attention-is-all-you-need/)
+
+**2. 代码看不懂？看矩阵是怎么一格一格算出来的**
+
+同样用「猫吃鱼」3 个词，把一次完整的推理拆成 11 步，每个矩阵都能点「播放」，看每一格是怎么算出来的。读代码卡住的时候，对照着看会容易很多。
+
+<p align="center"><img src="assets/matrix-attention.gif" alt="注意力分数逐格计算" width="100%"></p>
+
+👉 [大模型是怎么推理的](https://namiai.tech/matrix/)
+
 ## 写在前面
 
 这个系列是我自己从零开始、一点一点学大模型留下的笔记。
