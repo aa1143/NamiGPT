@@ -68,9 +68,9 @@ def run(prompt, max_new_tokens, temperature, top_k, seed):
     return text, "\n".join(lines)
 
 
-with gr.Blocks(title="从零手写 GPT-2") as app:
+with gr.Blocks(title="NamiGPT · 从零手写 GPT-2") as app:
     gr.Markdown(
-        "# 从零手写 GPT-2 · 推理演示\n"
+        "# NamiGPT · 推理演示\n"
         "模型代码 100% 手写（见 `gpt2/model.py`），权重来自 OpenAI 官方 GPT-2 124M。\n"
         "GPT-2 只会续写、不会对话，建议输入英文开头。"
     )

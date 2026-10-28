@@ -1,12 +1,16 @@
-# 从零手写 GPT-2
+# NamiGPT · 纳米GPT
 
-[![test](https://github.com/aa1143/gpt2-from-scratch-zh/actions/workflows/test.yml/badge.svg)](https://github.com/aa1143/gpt2-from-scratch-zh/actions/workflows/test.yml)
+**从零手写 GPT-2，一行行看懂大模型。**
+
+[![test](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml/badge.svg)](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml)
 
 用 PyTorch 从零手写一个 GPT-2，加载 OpenAI 官方权重，跑通推理和文本生成。
 
 - 不调用任何现成的 Transformer 模块，模型代码 [`gpt2/model.py`](gpt2/model.py) 不到 200 行
 - 用一个 3 个词的例子「猫吃鱼」，从分词一路推到文本生成，每篇都配可运行脚本
 - 和 HuggingFace 官方实现逐项对齐，[测试](tests/test_vs_huggingface.py)保证结果一致
+
+> 名字致敬 Karpathy 的 [nanoGPT](https://github.com/karpathy/nanoGPT)。NamiGPT 是一个面向中文读者的版本：不追求训练效率，而是用「猫吃鱼」这个例子，把 GPT-2 的每一步拆开讲清楚。
 
 📖 图文版教程：[namiai.tech/articles](https://namiai.tech/articles/)
 
@@ -15,8 +19,8 @@
 ## 快速开始
 
 ```bash
-git clone https://github.com/aa1143/gpt2-from-scratch-zh.git
-cd gpt2-from-scratch-zh
+git clone https://github.com/aa1143/NamiGPT.git
+cd NamiGPT
 pip install -r requirements.txt
 
 # 国内网络建议先设置 HuggingFace 镜像（只用来下载官方权重）
@@ -77,7 +81,7 @@ python chapters/01-inference/ep06_multi_head_attention.py
 ## 仓库结构
 
 ```
-gpt2-from-scratch-zh/
+NamiGPT/
 ├── gpt2/                  # 完整的 GPT-2 实现，可以直接 import
 │   ├── config.py          #   模型配置（124M / 355M / 774M / 1.5B）
 │   ├── model.py           #   模型本体：LayerNorm、Attention、FFN、Block、GPT
