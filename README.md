@@ -28,6 +28,35 @@
 
 ---
 
+## 推理篇：从零拼出 GPT-2
+
+| # | 主题 | 图文教程 | 原稿 | 代码 |
+|---|---|---|---|---|
+| 01 | 项目介绍 | [网页](https://namiai.tech/articles/llm-from-scratch/) | [md](docs/01-inference/01-llm-from-scratch.md) | — |
+| 02 | Tokenizer 分词器 | [网页](https://namiai.tech/articles/tokenizer/) | [md](docs/01-inference/02-tokenizer.md) | [ep02](chapters/01-inference/ep02_tokenizer.py) |
+| 03 | Embedding 嵌入层 | [网页](https://namiai.tech/articles/embedding/) | [md](docs/01-inference/03-embedding.md) | [ep03](chapters/01-inference/ep03_embedding.py) |
+| 04 | Positional Encoding 位置编码 | [网页](https://namiai.tech/articles/positional-encoding/) | [md](docs/01-inference/04-positional-encoding.md) | [ep04](chapters/01-inference/ep04_positional_encoding.py) |
+| 05 | Self-Attention 自注意力 | [网页](https://namiai.tech/articles/self-attention/) | [md](docs/01-inference/05-self-attention.md) | [ep05](chapters/01-inference/ep05_self_attention.py) |
+| 06 | Multi-Head Attention 多头注意力 | [网页](https://namiai.tech/articles/multi-head-attention/) | [md](docs/01-inference/06-multi-head-attention.md) | [ep06](chapters/01-inference/ep06_multi_head_attention.py) |
+| 07 | Residual Connection 残差连接 | [网页](https://namiai.tech/articles/residual-connection/) | [md](docs/01-inference/07-residual-connection.md) | [ep07](chapters/01-inference/ep07_residual.py) |
+| 08 | LayerNorm 层归一化 | [网页](https://namiai.tech/articles/layer-norm/) | [md](docs/01-inference/08-layernorm.md) | [ep08](chapters/01-inference/ep08_layernorm.py) |
+| 09 | FFN 前馈网络 | [网页](https://namiai.tech/articles/ffn/) | [md](docs/01-inference/09-ffn.md) | [ep09](chapters/01-inference/ep09_ffn.py) |
+| 10 | Activation Function 激活函数 | [网页](https://namiai.tech/articles/activation-function/) | [md](docs/01-inference/10-activation-function.md) | [ep10](chapters/01-inference/ep10_activation.py) |
+| 11 | Transformer Block | [网页](https://namiai.tech/articles/transformer-block/) | [md](docs/01-inference/11-transformer-block.md) | [ep11](chapters/01-inference/ep11_transformer_block.py) |
+| 12 | Transformer Stack 堆叠 | [网页](https://namiai.tech/articles/stack/) | [md](docs/01-inference/12-transformer-stack.md) | [ep12](chapters/01-inference/ep12_transformer_stack.py) |
+| 13 | Loading Pretrained Weights 加载权重 | [网页](https://namiai.tech/articles/loading-pretrained-weights/) | [md](docs/01-inference/13-loading-pretrained-weights.md) | [ep13](chapters/01-inference/ep13_load_weights.py) |
+| 14 | Text Generation 文本生成 | [网页](https://namiai.tech/articles/text-generation/) | [md](docs/01-inference/14-text-generation.md) | [ep14](chapters/01-inference/ep14_generate.py) |
+| 15 | Interpretability 可解释性 | [网页](https://namiai.tech/articles/interpretability/) | [md](docs/01-inference/15-interpretability.md) | [ep15](chapters/01-inference/ep15_interpretability.py) |
+
+每个脚本都可以单独运行，例如：
+
+```bash
+python chapters/01-inference/ep06_multi_head_attention.py
+```
+
+
+---
+
 ## 快速开始
 
 ```bash
@@ -59,34 +88,6 @@ python demo/app.py
 ```
 
 > GPT-2 没有经过对话微调，它只会「接着往下写」，不会回答问题；训练语料以英文为主，建议输入英文。
-
----
-
-## 推理篇：从零拼出 GPT-2
-
-| # | 主题 | 图文教程 | 原稿 | 代码 |
-|---|---|---|---|---|
-| 01 | 项目介绍 | [网页](https://namiai.tech/articles/llm-from-scratch/) | [md](docs/01-inference/01-llm-from-scratch.md) | — |
-| 02 | Tokenizer 分词器 | [网页](https://namiai.tech/articles/tokenizer/) | [md](docs/01-inference/02-tokenizer.md) | [ep02](chapters/01-inference/ep02_tokenizer.py) |
-| 03 | Embedding 嵌入层 | [网页](https://namiai.tech/articles/embedding/) | [md](docs/01-inference/03-embedding.md) | [ep03](chapters/01-inference/ep03_embedding.py) |
-| 04 | Positional Encoding 位置编码 | [网页](https://namiai.tech/articles/positional-encoding/) | [md](docs/01-inference/04-positional-encoding.md) | [ep04](chapters/01-inference/ep04_positional_encoding.py) |
-| 05 | Self-Attention 自注意力 | [网页](https://namiai.tech/articles/self-attention/) | [md](docs/01-inference/05-self-attention.md) | [ep05](chapters/01-inference/ep05_self_attention.py) |
-| 06 | Multi-Head Attention 多头注意力 | [网页](https://namiai.tech/articles/multi-head-attention/) | [md](docs/01-inference/06-multi-head-attention.md) | [ep06](chapters/01-inference/ep06_multi_head_attention.py) |
-| 07 | Residual Connection 残差连接 | [网页](https://namiai.tech/articles/residual-connection/) | [md](docs/01-inference/07-residual-connection.md) | [ep07](chapters/01-inference/ep07_residual.py) |
-| 08 | LayerNorm 层归一化 | [网页](https://namiai.tech/articles/layer-norm/) | [md](docs/01-inference/08-layernorm.md) | [ep08](chapters/01-inference/ep08_layernorm.py) |
-| 09 | FFN 前馈网络 | [网页](https://namiai.tech/articles/ffn/) | [md](docs/01-inference/09-ffn.md) | [ep09](chapters/01-inference/ep09_ffn.py) |
-| 10 | Activation Function 激活函数 | [网页](https://namiai.tech/articles/activation-function/) | [md](docs/01-inference/10-activation-function.md) | [ep10](chapters/01-inference/ep10_activation.py) |
-| 11 | Transformer Block | [网页](https://namiai.tech/articles/transformer-block/) | [md](docs/01-inference/11-transformer-block.md) | [ep11](chapters/01-inference/ep11_transformer_block.py) |
-| 12 | Transformer Stack 堆叠 | [网页](https://namiai.tech/articles/stack/) | [md](docs/01-inference/12-transformer-stack.md) | [ep12](chapters/01-inference/ep12_transformer_stack.py) |
-| 13 | Loading Pretrained Weights 加载权重 | [网页](https://namiai.tech/articles/loading-pretrained-weights/) | [md](docs/01-inference/13-loading-pretrained-weights.md) | [ep13](chapters/01-inference/ep13_load_weights.py) |
-| 14 | Text Generation 文本生成 | [网页](https://namiai.tech/articles/text-generation/) | [md](docs/01-inference/14-text-generation.md) | [ep14](chapters/01-inference/ep14_generate.py) |
-| 15 | Interpretability 可解释性 | [网页](https://namiai.tech/articles/interpretability/) | [md](docs/01-inference/15-interpretability.md) | [ep15](chapters/01-inference/ep15_interpretability.py) |
-
-每个脚本都可以单独运行，例如：
-
-```bash
-python chapters/01-inference/ep06_multi_head_attention.py
-```
 
 ---
 
