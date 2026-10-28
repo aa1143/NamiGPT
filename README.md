@@ -5,6 +5,13 @@
 **零基础入门大模型（LLM）的基础教程：从零手写 GPT-2，一行行看懂大模型是怎么工作的。**
 
 [![test](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml/badge.svg)](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Code License](https://img.shields.io/badge/Code-MIT-green)](LICENSE)
+[![Docs License](https://img.shields.io/badge/Docs-CC%20BY--NC%204.0-lightgrey)](LICENSE-docs)
+[![教程](https://img.shields.io/badge/图文教程-namiai.tech-FFD84D)](https://namiai.tech/articles/)
+[![GitHub stars](https://img.shields.io/github/stars/aa1143/NamiGPT?style=social)](https://github.com/aa1143/NamiGPT/stargazers)
+[![X](https://img.shields.io/badge/@antiAIvo-000000?logo=x&logoColor=white)](https://x.com/antiAIvo)
 
 不需要大模型基础，会一点 Python、懂矩阵乘法这样的线性代数基础就够了。我们用 PyTorch 从零手写一个 GPT-2，加载 OpenAI 官方权重，跑通推理和文本生成。
 
