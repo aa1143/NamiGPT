@@ -1,18 +1,18 @@
-<p align="center"><img src="assets/cover.png" alt="NamiGPT · 纳米GPT：从零手写 GPT-2，一行行看懂大模型" width="100%"></p>
+<p align="center"><img src="assets/cover.png" alt="NamiGPT：零基础入门大模型 · LLM 基础教程" width="100%"></p>
 
-# NamiGPT · 纳米GPT
+# NamiGPT
 
-**从零手写 GPT-2，一行行看懂大模型。**
+**零基础入门大模型（LLM）的基础教程：从零手写 GPT-2，一行行看懂大模型是怎么工作的。**
 
 [![test](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml/badge.svg)](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml)
 
-用 PyTorch 从零手写一个 GPT-2，加载 OpenAI 官方权重，跑通推理和文本生成。
+不需要任何大模型基础，只要会一点 Python。我们用 PyTorch 从零手写一个 GPT-2，加载 OpenAI 官方权重，跑通推理和文本生成。
 
 - 不调用任何现成的 Transformer 模块，模型代码 [`gpt2/model.py`](gpt2/model.py) 不到 200 行
 - 用一个 3 个词的例子「猫吃鱼」，从分词一路推到文本生成，每篇都配可运行脚本
 - 和 HuggingFace 官方实现逐项对齐，[测试](tests/test_vs_huggingface.py)保证结果一致
 
-> 名字致敬 Karpathy 的 [nanoGPT](https://github.com/karpathy/nanoGPT)。NamiGPT 是一个面向中文读者的版本：不追求训练效率，而是用「猫吃鱼」这个例子，把 GPT-2 的每一步拆开讲清楚。
+> 名字致敬 Karpathy 的 [nanoGPT](https://github.com/karpathy/nanoGPT)。NamiGPT 是面向中文零基础读者的入门教程：不追求训练效率，而是用「猫吃鱼」这个例子，把 GPT-2 的每一步拆开讲清楚。
 
 📖 图文版教程：[namiai.tech/articles](https://namiai.tech/articles/)
 
