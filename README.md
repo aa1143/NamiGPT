@@ -6,8 +6,7 @@
 
 [![test](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml/badge.svg)](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml)
 
-不需要任何大模型基础，只要会一点 Python。<br>
-我们用 PyTorch 从零手写一个 GPT-2，加载 OpenAI 官方权重，跑通推理和文本生成。
+不需要任何大模型基础，只要会一点 Python。我们用 PyTorch 从零手写一个 GPT-2，加载 OpenAI 官方权重，跑通推理和文本生成。
 
 - 不调用任何现成的 Transformer 模块，模型代码 [`gpt2/model.py`](gpt2/model.py) 不到 200 行
 - 用一个 3 个词的例子「猫吃鱼」，从分词一路推到文本生成，每篇都配可运行脚本
@@ -17,18 +16,13 @@
 
 这个系列是我自己从零开始、一点一点学大模型留下的笔记。
 
-一开始我也看不懂 Attention 公式里的 Q、K、V，不知道 768 维的向量到底在算什么。<br>
-所以我给自己定了一个笨办法：每学一个模块，就用最小的例子「猫吃鱼」把矩阵一步步算出来，<br>
-再亲手写成代码跑一遍，确认真的懂了，才往下走。
+一开始我也看不懂 Attention 公式里的 Q、K、V，不知道 768 维的向量到底在算什么。所以我给自己定了一个笨办法：每学一个模块，就用最小的例子「猫吃鱼」把矩阵一步步算出来，再亲手写成代码跑一遍，确认真的懂了，才往下走。
 
-15 篇文章，就是这条路上的 15 个台阶。<br>
-从分词、Embedding、注意力，一直写到加载 OpenAI 的官方权重、让模型真正生成文字。<br>
-仓库里的每一行代码，我都自己写过、跑过。
+15 篇文章，就是这条路上的 15 个台阶。从分词、Embedding、注意力，一直写到加载 OpenAI 的官方权重、让模型真正生成文字。仓库里的每一行代码，我都自己写过、跑过。
 
 如果你也想搞懂大模型，但被公式和论文劝退过，希望这份笔记能帮你少走一些弯路。
 
-> 名字致敬 Karpathy 的 [nanoGPT](https://github.com/karpathy/nanoGPT)。<br>
-> NamiGPT 是面向中文零基础读者的入门教程：不追求训练效率，而是用「猫吃鱼」这个例子，把 GPT-2 的每一步拆开讲清楚。
+> 名字致敬 Karpathy 的 [nanoGPT](https://github.com/karpathy/nanoGPT)。NamiGPT 是面向中文零基础读者的入门教程：不追求训练效率，而是用「猫吃鱼」这个例子，把 GPT-2 的每一步拆开讲清楚。
 
 📖 图文版教程：[namiai.tech/articles](https://namiai.tech/articles/)
 
@@ -64,8 +58,7 @@ pip install gradio
 python demo/app.py
 ```
 
-> GPT-2 没有经过对话微调，它只会「接着往下写」，不会回答问题；<br>
-> 训练语料以英文为主，建议输入英文。
+> GPT-2 没有经过对话微调，它只会「接着往下写」，不会回答问题；训练语料以英文为主，建议输入英文。
 
 ---
 
@@ -122,10 +115,8 @@ TEST_PRETRAINED=1 pytest tests/ -v     # 额外下载真实 GPT-2 权重再对�
 ## 和 HuggingFace 实现对齐时要注意的三个细节
 
 1. **因果掩码**：每个词只能看到自己和前面的词。漏掉这一步，加载官方权重后输出就是错的。
-2. **权重转置**：GPT-2 原始代码用 `Conv1D`，权重形状是 `[in, out]`；`nn.Linear` 是 `[out, in]`，搬过来要转置。<br>
-`c_attn` 还把 Q、K、V 拼在了一起，要先切成三份。
-3. **GELU 版本**：GPT-2 用的是 tanh 近似版。<br>
-PyTorch 的 `nn.GELU()` 默认是精确版，要写 `approximate="tanh"` 才能逐位对齐。
+2. **权重转置**：GPT-2 原始代码用 `Conv1D`，权重形状是 `[in, out]`；`nn.Linear` 是 `[out, in]`，搬过来要转置。`c_attn` 还把 Q、K、V 拼在了一起，要先切成三份。
+3. **GELU 版本**：GPT-2 用的是 tanh 近似版。PyTorch 的 `nn.GELU()` 默认是精确版，要写 `approximate="tanh"` 才能逐位对齐。
 
 ---
 
