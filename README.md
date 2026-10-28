@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/cover.png" alt="NamiGPT · 纳米GPT：从零手写 GPT-2，一行行看懂大模型" width="100%"></p>
+
 # NamiGPT · 纳米GPT
 
 **从零手写 GPT-2，一行行看懂大模型。**
