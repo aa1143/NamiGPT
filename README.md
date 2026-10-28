@@ -6,7 +6,7 @@
 
 [![test](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml/badge.svg)](https://github.com/aa1143/NamiGPT/actions/workflows/test.yml)
 
-不需要任何大模型基础，只要会一点 Python。我们用 PyTorch 从零手写一个 GPT-2，加载 OpenAI 官方权重，跑通推理和文本生成。
+不需要大模型基础，会一点 Python、懂矩阵乘法这样的线性代数基础就够了。我们用 PyTorch 从零手写一个 GPT-2，加载 OpenAI 官方权重，跑通推理和文本生成。
 
 - 不调用任何现成的 Transformer 模块，模型代码 [`gpt2/model.py`](gpt2/model.py) 不到 200 行
 - 用一个 3 个词的例子「猫吃鱼」，从分词一路推到文本生成，每篇都配可运行脚本
