@@ -9,7 +9,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Code License](https://img.shields.io/badge/Code-MIT-green)](LICENSE)
 [![Docs License](https://img.shields.io/badge/Docs-CC%20BY--NC%204.0-lightgrey)](LICENSE-docs)
-[![教程](https://img.shields.io/badge/图文教程-namiai.tech-FFD84D)](https://namiai.tech/articles/)
+[![教程](https://img.shields.io/badge/%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B-namiai.tech-FFD84D)](https://namiai.tech/articles/)
 [![GitHub stars](https://img.shields.io/github/stars/aa1143/NamiGPT?style=social)](https://github.com/aa1143/NamiGPT/stargazers)
 [![X](https://img.shields.io/badge/@antiAIvo-000000?logo=x&logoColor=white)](https://x.com/antiAIvo)
 
