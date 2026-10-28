@@ -1,0 +1,4 @@
+torch>=2.0
+tiktoken>=0.5
+transformers>=4.30   # 只用来下载官方权重和做对齐测试
+pytest
